@@ -1,0 +1,48 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  height: auto;
+}
+
+.step-container {
+  min-height: 150px;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0 40px 0;
+}
+
+.step-contents {
+  height: auto;
+}
+
+.ticket-day-price {
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+
+.price-display {
+  margin-left: 35%;
+}
+
+.highlighted {
+  border: 2px solid orange;
+}
+
+.highlighted .ticket-price {
+   color: orange;
+}
+
+#enter-details, #choose-day, #ticket-info, #checkout {
+  display: none;
+}
+
+#search-days {
+  margin-top: 25px;
+}
+
+#walk-up-rate {
+  text-decoration: line-through;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket UI</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  </head>
+  <body>
+    <h1 class="text-center">Ticket UI</h1>
+
+    <!-- Step 1 -->
+    <div class="container">
+      <div class="step-container col-xs-12" id="ticket-type">
+        <h2>1. Select your Ticket type:</h2>
+        <div class="step-contents">
+          <button class="btn btn-default" id="new-ticket">New</button>
+          <button class="btn btn-default" id="reload-ticket">Reload</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-container col-xs-12" id="enter-details">
+        <h2>2. Enter your details:</h2>
+        <div class="step-contents">
+          <div class="form-group col-sm-3 col-xs-12">
+            <label for="start-date" class="control-label">Start Date</label>
+            <input name="start-date" class="form-control" type="date"/>
+          </div>
+
+          <div class="form-group col-sm-3 col-xs-12">
+            <label for="number-of-days" class="control-label">Number of Days</label>
+            <input name="number-of-days" class="form-control" type="number" value="1" min="1"/>
+          </div>
+
+          <!-- IF 'RELOAD' IS SELECTED IN PREVIOUS STEP REPLACE WITH 'ID#' FIELD -->
+          <div class="form-group col-sm-3 col-xs-12" id="age-id">
+
+          </div>
+
+          <div class="form-group col-sm-3 col-xs-12">
+            <button class="btn btn-default" id="search-days">Search</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- Step 3 -->
+     <!-- ONLY SHOW IF NUMBER OF DAYS IN PREVIOUS STEP IS SET TO 1 -->
+      <div class="step-container col-xs-12" id="choose-day">
+        <h2>3. Choose a Day:</h2>
+        <div class="step-contents">
+          <div class="col-md-2">
+            <p>Scroll Left</p>
+          </div>
+          <ul class="col-md-8" id="date-options">
+            
+          </ul>
+          <div class="col-md-2">
+            <p>Scroll Right</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-container col-xs-12" id="ticket-info">
+        <h2>4. Your Ticket Info:</h2>
+        <div class="step-contents">
+          <h3>Type - # Day Mammoth Mountain Lift Ticket</h3>
+          <div class="col-sm-4">
+            <p><strong><span id="display-start-date"></span></strong> Start Date</p>
+            <p><strong><span id="walk-up-rate">$000.00</span></strong> Walk-up Rate</p>
+            <p><strong>$00.00</strong> Your Savings</p>
+          </div>
+          <div class="col-sm-8">
+            <div class="col-xs-12">
+              <p class="price-display">Your Price</p>
+              <p class="price-display">$00.00</p>
+            </div>
+            <div class="col-xs-12">
+              <div class="col-sm-4">
+                <label for="quantity" class="control-label">Quantity</label>
+                <input name="quantity" type="number" class="form-control" />
+              </div>
+              <div class="col-sm-8">
+                <button class="btn btn-default" id="add-to-cart">Add to Cart</button>
+                <p><a href="">Terms & Conditions</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-container col-xs-12" id="checkout">
+        <h2>5. Need more Tickets?</h2>
+        <div class="step-contents">
+          <button class="btn btn-default" id="add-another">Add Another Ticket</button>
+          <button class="btn btn-success" id="go-to-checkout">Checkout</button>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
